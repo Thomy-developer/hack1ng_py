@@ -1,0 +1,144 @@
+/* Estilos generales */
+body {
+    background-color: #000;
+    color: #00FF00;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.fullscreen {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que ocupe al menos el alto de la pantalla */
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%; /* Asegura que el contenedor ocupe el ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 20px;
+}
+
+
+/* Estilos para el mensaje adicional */
+.disclaimer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #39FF14;
+    text-align: center;
+}
+
+/* Estilos para el título */
+h1 {
+    font-size: 2.5em;
+    text-shadow: 0 0 5px #00FF00;
+    animation: blink 1s infinite;
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilos para el cursor */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: #00FF00;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* Efecto de fondo */
+.matrix-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 0, 0.1),
+        rgba(0, 255, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    animation: matrix 10s linear infinite;
+}
+
+@keyframes matrix {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(100%); }
+}
+
+/* Estilos para la tabla */
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #00FF00;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #00FF00;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #00FF00;
+}
+
+th {
+    background-color: #0A0A0A;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+/* Estilos para el botón de contacto */
+/* Estilos para el botón de contacto */
+#contactBtn {
+    background-color: #00FF00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1em;
+    cursor: pointer;
+    position: fixed; /* Fija el botón en la pantalla */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    transition: background-color 0.3s ease;
+}
+
+#contactBtn:hover {
+    background-color: #39FF14;
+}
+
+/* Estilos para la información de contacto */
+#contactInfo {
+    position: fixed; /* Fija la información en la pantalla */
+    top: 70px; /* Distancia desde la parte superior (debajo del botón) */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    padding: 10px;
+    border: 1px solid #00FF00;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.hidden {
+    display: none; /* Oculta la información de contacto */
+}
